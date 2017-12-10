@@ -3,7 +3,8 @@ def precedence(symbol):
         return 2
     if symbol == "*" or symbol == "/":
         return 4
-
+    if symbol == "^":
+        return 8
 
 if __name__ == "__main__":
     expression = raw_input()[::-1]
