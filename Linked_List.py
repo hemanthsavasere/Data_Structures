@@ -10,8 +10,8 @@ class Node(object):
 if __name__ == "__main__":
     head = Node(1)
     b = Node(2)
-    head.next = b
     c = Node(5)
+    head.next = b
     b.next = c
     temp = head
     while temp is not None:
