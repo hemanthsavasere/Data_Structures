@@ -1,18 +1,13 @@
-def menu(n):
-    cnt = 0
-    i = 11
-    while n != 0 and i >= 0:
-        if 2**i <= n:
-            n = n - (2 ** i)
-            cnt += 1
+arr = [2048, 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1]
+for _ in range(int(input())):
+    menus, i = 0, 0
+    price = int(input())
+
+    while price != 0 and i <= len(arr):
+        if price < arr[i]:
+            i += 1
         else:
-            i -= 1
-    return cnt
+            price = price - arr[i]
+            menus += 1
 
-
-if __name__ == "__main__":
-    for _ in xrange(int(raw_input())):
-        num = int(raw_input())
-        k = menu(num)
-        print (k)
-
+    print(menus)
